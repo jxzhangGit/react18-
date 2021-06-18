@@ -1,8 +1,8 @@
 # react18-notes
-# react 18 新特性
+## react 18 新特性
 
-## 1. Automatic batching(自动批处理)
-### 批处理
+### 1. Automatic batching(自动批处理)
+#### 批处理
 批处理是指React将多个状态更新分组为一个并重新渲染，以获得更好的性能。
 在react 17中， 如果在同一个点击事件中有两个状态更新，React总是会把它们批处理成一个再重新渲染。如果运行下面的代码，每次点击时，React只执行一次渲染，尽管设置了两次状态:
 ```JavaScript
@@ -48,7 +48,7 @@
         );
     }
 ```
-### 自动批处理(new)
+#### 自动批处理(new)
     从React 18的createRoot开始，所有的更新都会自动批处理。
     这意味着timeouts, promises, native event handlers或任何其他事件中的更新将以与React事件中的更新相同的方式进行批处理。即react在任何时候都进行批处理，这会减少渲染工作量，从而提高应用程序的性能:
 ``` Javascript
